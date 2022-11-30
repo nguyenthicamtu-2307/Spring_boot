@@ -41,9 +41,9 @@ public class khachhangController {
 		
 	}
 	
-	@PostMapping("/update/{taiKhoan}")//xử  lý hàm bằng phương thức post
-	public String save(@RequestBody khachhang p,@PathVariable String taiKhoan,Model model) {
-		p.setTaikhoan(taiKhoan);
+	@PostMapping("/update/{taikhoan}")//xử  lý hàm bằng phương thức post
+	public String save(@RequestBody khachhang p,@PathVariable String taikhoan,Model model) {
+		p.setTaikhoan(taikhoan);
 		int r=service.edit(p);
 		return (r == 1 ? "Success" : "Error");
 	}
