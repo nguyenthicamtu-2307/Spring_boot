@@ -7,7 +7,7 @@ import com.sinfloo.modelo.khachhang;
 
 public interface khachhangInterface {
 	public List<Map<String, Object>>listar();
-	public List<Map<String, Object>>listarId(int id);
+	public Object listarId(String taiKhoan);
 	public int add(khachhang p);
 	public int edit(khachhang p);
 	public int delete(int id);

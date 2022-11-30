@@ -27,9 +27,8 @@ public class khachhangService implements khachhangInterface{
 	}
 
 	@Override
-	public List<Map<String, Object>> listarId(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Map<String, Object>> listarId(String taiKhoan) {
+		return dao.listarId(taiKhoan);
 	}
 
 	@Override

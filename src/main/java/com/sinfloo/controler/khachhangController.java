@@ -25,6 +25,12 @@ public class khachhangController {
 	public List<Map<String, Object>> listar(Model model) {
 		return service.listar();
 	}
+
+	@GetMapping("/listarId/{taiKhoan}")//xử lý hàm bằng phương thức get
+	public Object listarId(@PathVariable String taiKhoan, Model model) {
+		return service.listarId(taiKhoan);
+	}
+
 	@PostMapping("/add")
 	public String save(@RequestBody khachhang p,Model model) {
 		int idKH=service.add(p);

@@ -22,15 +22,16 @@ public class khachhangDAO implements khachhangInterface {
 	}
 
 	@Override
-	public List<Map<String, Object>> listarId(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Map<String, Object>> listarId(String taiKhoan) {
+		String sql = "select * from tbluser where taiKhoan = ?";
+		List<Map<String, Object>> list = template.queryForList(sql, taiKhoan);
+		return list;
 	}
 
 	@Override
 	public int add(khachhang p) {
-		String sql = "insert into tbluser(tenuser, dob, gioitinh, diachi, sdt, taikhoan, matkhau,chieucao,cannang)values(?,?,?,?,?,?,?,?,?)";
-		return template.update(sql, p.getTenuser(), p.getDob(), p.getGioitinh(), p.getDiachi(),p.getSdt(),p.getTaikhoan(),p.getMatkhau(),p.getChieucao(),p.getCannang());
+		String sql = "insert into tbluser(tenuser, dob, gioitinh, diachi, sdt, taikhoan, matkhau,chieucao,cannang, quyen)values(?,?,?,?,?,?,?,?,?,?)";
+		return template.update(sql, p.getTenuser(), p.getDob(), p.getGioitinh(), p.getDiachi(),p.getSdt(),p.getTaikhoan(),p.getMatkhau(),p.getChieucao(),p.getCannang(),4);
 	}
 
 	@Override
