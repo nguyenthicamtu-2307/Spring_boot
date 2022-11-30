@@ -35,8 +35,8 @@ public class khachhangDAO implements khachhangInterface {
 
 	@Override
 	public int edit(khachhang p) {
-		String sql="update tbluser set tenuser=?,dob=?,gioitinh=?,diachi=?,sdt=?,matkhau=?,	chieucao=?,cannang=? where taikhoan=?";		
-		return template.update(sql,p.getTenuser(), p.getDob(), p.getGioitinh(),p.getMatkhau(),p.getChieucao(),p.getCannang(),p.getTaikhoan());
+		String sql="update tbluser set tenuser=?,dob=?,gioitinh=?,diachi=?,sdt=?,matkhau=?,chieucao=?,cannang=? where taikhoan=?";		
+		return template.update(sql,p.getTenuser(), p.getDob(), p.getGioitinh(),p.getDiachi(),p.getSdt(),p.getMatkhau(),p.getChieucao(),p.getCannang(),p.getTaikhoan());
 	}
 
 	@Override
